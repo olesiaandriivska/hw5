@@ -329,6 +329,7 @@
 //         this.size = size;
 //     }
 // }
+//
 // class Prince {
 //     constructor(name, age, sizeOfSlipper) {
 //         this.name = name;
@@ -336,22 +337,22 @@
 //         this.sizeOfSlipper = sizeOfSlipper;
 //     }
 //
-//     searchPopelyshka() {
-//         let popelyshkaPrince = popelyshka[0];
-//         for (let i = 0; i < popelyshka.length; i++) {
-//             for (let j = 0; j < popelyshka.length; j++) {
+//     searchPopelyshka(arr1, arr2) {
+//         let popelyshkaPrince = arr1[0];
+//         for (let i = 0; i < arr1.length; i++) {
+//             for (let j = 0; j < arr1.length; j++) {
 //
-//                 const popelyshkaElement = popelyshka[i];
-//                 if (popelyshkaElement.size === prince.sizeOfSlipper) {
-//                     popelyshkaPrince = popelyshkaElement;
+//                 const arr1Element = arr1[i];
+//                 if (arr1Element.size === arr2.sizeOfSlipper) {
+//                     popelyshkaPrince = arr1Element;
 //                     console.log(popelyshkaPrince);
-//                     return popelyshka;
+//                     return arr1;
 //                 }
-//
 //             }
 //         }
 //     }
 // }
+//
 // let popelyshka = [
 //     new Popelyshka('Vika', 21, 37),
 //     new Popelyshka('Dasha', 23, 39),
@@ -368,7 +369,7 @@
 // let prince = new Prince('Victor', 26, 36);
 // console.log(prince);
 // console.log(popelyshka);
-// prince.searchPopelyshka();
+// prince.searchPopelyshka(popelyshka,prince);
 
 
 // ==============================================
@@ -388,16 +389,16 @@ function Prince(name, age, sizeOfSlipper) {
     this.age = age;
     this.sizeOfSlipper = sizeOfSlipper;
 
-    this.searchPopelyshka = function () {
-        let popelyshkaPrince = popelyshka[0];
-        for (let i = 0; i < popelyshka.length; i++) {
-            for (let j = 0; j < popelyshka.length; j++) {
+    this.searchPopelyshka = function (arr1, arr2) {
+        let popelyshkaPrince = arr1[0];
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < arr1.length; j++) {
 
-                const popelyshkaElement = popelyshka[i];
-                if (popelyshkaElement.size === prince.sizeOfSlipper) {
-                    popelyshkaPrince = popelyshkaElement;
+                const arr1Element = arr1[i];
+                if (arr1Element.size === arr2.sizeOfSlipper) {
+                    popelyshkaPrince = arr1Element;
                     console.log(popelyshkaPrince);
-                    return popelyshka;
+                    return arr1;
                 }
 
             }
@@ -421,4 +422,4 @@ let popelyshka = [
 let prince = new Prince('Victor', 26, 36);
 console.log(prince);
 console.log(popelyshka);
-prince.searchPopelyshka();
+prince.searchPopelyshka(popelyshka,prince);
